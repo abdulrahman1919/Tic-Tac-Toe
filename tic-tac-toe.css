@@ -1,0 +1,248 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: darkcyan;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    padding: 10px;
+    overflow-x: hidden;
+
+}
+
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    height: 18rem;
+    width: 18rem;
+    border: none;
+    border-radius: 20px;
+    box-shadow: -1px 3px 20px 10px #00000073;
+    margin-top: 5rem;
+    margin-bottom: 20px;
+}
+
+.gamebtns {
+    height: 6rem;
+    width: 6rem;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.393);
+    background-color: rgb(84, 78, 78);
+    cursor: pointer;
+    color: white;
+    font-size: 4rem;
+}
+
+.btn1 {
+    border-top-left-radius: 20px;
+}
+
+.btn3 {
+    border-top-right-radius: 20px;
+}
+
+.btn7 {
+    border-bottom-left-radius: 20px;
+}
+
+.btn8 {
+    border-bottom-right-radius: 20px;
+}
+
+.headerofgame {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamname {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(122, 57, 11);
+    text-decoration: underline;
+}
+
+.players {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.player1,
+.player2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 80px;
+    width: 110px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    gap: 8px;
+    background-color: rgba(12, 12, 12, 0.74);
+}
+
+.player1 :nth-child(2) {
+    color: tomato;
+}
+
+.player2 :nth-child(2) {
+    color: blue;
+}
+
+.vsheading {
+    color: rgb(151, 12, 12);
+    font-weight: 900;
+}
+
+.restbtn {
+    height: 45px;
+    width: 110px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 0 20px 7px #0000006b;
+    background-color: rgba(0, 0, 0, 0.886);
+    color: green;
+}
+
+.newgamebtn {
+    height: 3rem;
+    width: 8rem;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 0 20px 7px #0000006b;
+    background-color: rgba(0, 0, 0, 0.886);
+    color: green;
+}
+
+.showinner {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: goldenrod;
+    font-size: 40px;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.hide {
+    display: none;
+}
+
+.firstcomeinterface {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    flex-direction: column;
+    gap: 60px;
+    transition: .2s;
+}
+
+.firstcomeinterface h1 {
+    color: gold;
+    text-decoration: none;
+
+}
+
+.firstcomeinterface div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.startgamebtn {
+    height: 4rem;
+    width: 10rem;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border: 1px solid rgba(255, 217, 0, 0.646);
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 0 20px 7px #0000006b;
+    background-color: rgb(15 71 34 / 89%);
+    color: gold;
+}
+
+.startgamebtn:hover {
+    border: 2px solid rgba(255, 217, 0, 0.646);
+
+}
+
+.startgamebtn:active {
+    background-color: black;
+}
+
+.gameresetbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.restbtn:hover {
+    border: 2px solid rgb(24, 194, 24);
+}
+
+.restbtn:active {
+    background-color: rgb(51, 48, 48);
+}
+
+@media (max-height:620px) and (min-height:300px) {
+    body {
+        flex-direction: row;
+    }
+}
+
+@media (max-height:460px) and (min-height:300px) and (max-width:960px) and (min-width:300px) {
+    .game {
+        height: 12rem;
+        width: 12rem;
+    }
+
+    .gamebtns {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .restbtn {
+        transform: scale(.8);
+    }
+
+    .startgamebtn {
+        transform: scale(.8);
+    }
+}
